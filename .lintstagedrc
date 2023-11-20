@@ -1,0 +1,4 @@
+{
+  "*.{ts,tsx}": ["prettier --write", "eslint --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0"],
+  "*.{cjs,json,css}": ["prettier --write"]
+}
