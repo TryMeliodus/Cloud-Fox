@@ -1,0 +1,22 @@
+.container {
+  height: 100vh;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  row-gap: 14px;
+}
+
+.btngithub {
+  @apply bg-btngit py-2.5 rounded-md px-10 text-white font-medium text-[15px] flex items-center justify-center space-x-2;
+}

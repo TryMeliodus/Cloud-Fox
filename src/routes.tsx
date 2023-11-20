@@ -4,14 +4,24 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Default from './layout/default'
 
 // Pages
-import App from './pages/App'
+import Login from './pages/Login'
+import Email from './pages/Email'
+import Signup from './pages/Signup'
+import EmailSignup from './pages/EmailSignup'
+import GitSignup from './pages/GitSignup'
 
 export default function routes() {
   const publicRoutes = createBrowserRouter([
     {
       path: '/',
       element: <Default />,
-      children: [{ path: '/', element: <App /> }],
+      children: [
+        { path: '/', element: <Login /> },
+        { path: '/email', element: <Email /> },
+        { path: '/signup', element: <Signup /> },
+        { path: '/emailsignup', element: <EmailSignup /> },
+        { path: '/gitsignup', element: <GitSignup /> },
+      ],
     },
   ])
 

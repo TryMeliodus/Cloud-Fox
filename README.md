@@ -1,6 +1,6 @@
-# Ubona React Framework
+# Cloud Fox
 
-This framework provides a kickstart setup to get React working with `Ubona SDK` with some standard rules to follow.
+This framework provides a kickstart setup to get React working with `Cloud Fox` with some standard rules to follow.
 
 ## Expanding the ESLint configuration
 
