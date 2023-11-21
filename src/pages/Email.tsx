@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import style from '../styles/login.module.css'
+import style from '../styles/email.module.css'
 import emailLogo from '../assets/email2.png'
 import back from '../assets/back.png'
 

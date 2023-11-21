@@ -1,0 +1,26 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #c1ccd9;
+  border-radius: 6px;
+  column-gap: 90px;
+  margin-top: 40px;
+}
+
+.importbtn {
+  @apply bg-btnPrimary px-6 rounded-md text-white h-[38px];
+}

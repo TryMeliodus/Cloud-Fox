@@ -13,7 +13,7 @@ function EmailSignup() {
     <>
       <div className={style.container}>
         <div className="flex justify-center items-center flex-col min-h-screen">
-          <p className="text-default font-semibold text-3xl">Log in to deploy your project</p>
+          <p className="text-default font-semibold text-3xl">Sign up to deploy your project</p>
           <div className={style.subcontainer}>
             <input
               type="text"

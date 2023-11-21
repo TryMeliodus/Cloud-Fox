@@ -15,7 +15,7 @@ function Login() {
         <div className="flex justify-center items-center flex-col min-h-screen">
           <p className="text-default font-semibold text-3xl">Log in to deploy your project</p>
           <div className={style.subcontainer}>
-            <Link to={`/`} className={style.btngithub}>
+            <Link to={`/app`} className={style.btngithub}>
               <img className="w-auto h-6" src={gitLogo} alt="" />
               <p>Continue with Github</p>
             </Link>

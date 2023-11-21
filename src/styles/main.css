@@ -52,7 +52,7 @@
   @apply px-[3rem] py-5;
 }
 .footer {
-  @apply w-full py-6 px-[3rem]  border-t;
+  @apply w-full py-6 px-[3rem] border-t;
 }
 
 .subscribe {
@@ -88,4 +88,290 @@
   color: #7a8da2;
   font-weight: 400;
   margin-top: 15px;
+}
+
+#sidebar {
+  --tw-translate-x: -100%;
+}
+#menu-close-icon {
+  display: none;
+}
+
+#menu-open:checked ~ #sidebar {
+  --tw-translate-x: 0;
+}
+#menu-open:checked ~ * #mobile-menu-button {
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+#menu-open:checked ~ * #menu-open-icon {
+  display: none;
+}
+#menu-open:checked ~ * #menu-close-icon {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  #sidebar {
+    --tw-translate-x: 0;
+  }
+}
+.userlist tr:nth-child(odd) {
+  background-color: #ecf3f5;
+}
+.edit_popup {
+  animation: thanx_popup 0.2s;
+}
+@keyframes thanx_popup {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+  }
+}
+
+/* Toggle */
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #ffffff;
+}
+
+.slide_up {
+  animation: drag_popup 0.2s;
+}
+
+input:checked ~ .tab {
+  background-color: #0891b2;
+}
+
+@keyframes drag_popup {
+  from {
+    transform: translatey(30rem);
+  }
+  to {
+  }
+}
+
+.table-rc {
+  overflow-x: auto;
+}
+.table-rc td {
+  padding: 6px;
+}
+.table-rc td {
+  padding: 10px;
+  font-size: 14px;
+  color: #222;
+}
+.table-rc td a {
+  color: #fff;
+}
+.table-rc th {
+  padding: 10px;
+  color: #222;
+  font-size: 14px;
+  text-align: left;
+}
+.drop-set {
+  position: relative;
+  padding: 40px 0 50px;
+}
+
+.modal-form {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  height: auto;
+}
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  top: 0;
+  right: 0;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+  top: 0;
+  left: 15px;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+.modal-form .edit_popup {
+  height: 100%;
+}
+.preview-max img {
+  border: 1px solid #ddd;
+  padding: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.modal-form .form-btn {
+  justify-content: center;
+  margin-top: 30px;
+}
+.modal-form .form-btn button {
+  margin: 0 6px;
+}
+.modal-form .mdl-button button {
+  padding: 8px 10px;
+}
+
+.text-table_data img {
+  display: table;
+  min-width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  padding: 2px;
+}
+aside#sidebar nav {
+  text-align: left;
+}
+span.led-green {
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .table-rc-sec {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .modal-form .edit_popup {
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+  }
+
+  .modal-form .form-btn button {
+    margin: 0 3px;
+    padding: 10px;
+  }
+
+  .rdb-mobile-table {
+    border: transparent;
+  }
+  table.rdb-mobile thead {
+    display: none;
+  }
+  table.rdb-mobile tbody td {
+    position: relative;
+    display: block;
+    border: transparent;
+    padding: 12px 15px;
+    width: 100%;
+    border-radius: 0;
+    padding-left: 130px;
+  }
+  table.rdb-mobile tbody td:nth-child(even) {
+    background: #e7e7e7;
+  }
+  table.rdb-mobile tbody td:before {
+    left: 15px;
+    display: block;
+    overflow: hidden;
+    content: attr(data-colname);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: absolute;
+    font-weight: 500;
+  }
+  table.rdb-mobile tbody td span.led-green {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  table.rdb-mobile tbody td span.led-red {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .rdb-mobile-table table.rdb-mobile tbody tr.text-table_data {
+    border-bottom: 15px solid #fff;
+  }
+}
+
+@media (min-width: 1650px) {
+  .ads_drag {
+    width: 100%;
+  }
+}
+.loader {
+  border-top-color: #3498db;
+  -webkit-animation: spinner 1.5s linear infinite;
+  animation: spinner 1.5s linear infinite;
+}
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.tooltip {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 2px;
+  position: relative;
+}
+.tooltip:hover {
+  cursor: pointer;
+}
+
+.bubble {
+  clip-path: path(
+    'M 201.23862,50.748829 A 0.006,0.006 0 0 1 201.23262,50.754829 0.006,0.006 0 0 1 201.22662,50.748829 0.006,0.006 0 0 1 201.23262,50.742829 0.006,0.006 0 0 1 201.23862,50.748829 M 191.85968,17.069946 A 0.006,0.006 0 0 1 191.85368,17.075946 0.006,0.006 0 0 1 191.84768,17.069946 0.006,0.006 0 0 1 191.85368,17.063946 0.006,0.006 0 0 1 191.85968,17.069946 M 161.59133,52.880402 A 0.006,0.006 0 0 1 161.58533,52.886402 0.006,0.006 0 0 1 161.57933,52.880402 0.006,0.006 0 0 1 161.58533,52.874402 0.006,0.006 0 0 1 161.59133,52.880402 M 138.57033,11.101538 A 0.006,0.006 0 0 1 138.56433,11.107538 0.006,0.006 0 0 1 138.55833,11.101538 0.006,0.006 0 0 1 138.56433,11.095538 0.006,0.006 0 0 1 138.57033,11.101538 M 113.84406,50.322514 A 0.006,0.006 0 0 1 113.83806,50.328514 0.006,0.006 0 0 1 113.83206,50.322514 0.006,0.006 0 0 1 113.83806,50.316514 0.006,0.006 0 0 1 113.84406,50.322514 M 102.33355,21.333096 A 0.006,0.006 0 0 1 102.32755,21.339096 0.006,0.006 0 0 1 102.32155,21.333096 0.006,0.006 0 0 1 102.32755,21.327096 0.006,0.006 0 0 1 102.33355,21.333096 M 64.391521,55.864605 A 0.006,0.006 0 0 1 64.385521,55.870605 0.006,0.006 0 0 1 64.379521,55.864605 0.006,0.006 0 0 1 64.385521,55.858605 0.006,0.006 0 0 1 64.391521,55.864605 M 63.112575,17.496262 A 0.006,0.006 0 0 1 63.106575,17.502262 0.006,0.006 0 0 1 63.100575,17.496262 0.006,0.006 0 0 1 63.106575,17.490262 0.006,0.006 0 0 1 63.112575,17.496262 M 27.198234,49.857197 A 0.006,0.006 0 0 1 27.192234,49.863197 0.006,0.006 0 0 1 27.186234,49.857197 0.006,0.006 0 0 1 27.192234,49.851197 0.006,0.006 0 0 1 27.198234,49.857197 M 14.309602,18.772854 A 0.006,0.006 0 0 1 14.303602,18.778854 0.006,0.006 0 0 1 14.297602,18.772854 0.006,0.006 0 0 1 28.303602,18.766854 0.006,0.006 0 0 1 14.309602,18.772854'
+  );
+  filter: drop-shadow(rgba(0, 0, 0, 0.16) 0px 3px 6px) drop-shadow(rgba(0, 0, 0, 0.23) 0px 3px 6px);
+  left: 50px;
+  opacity: 0.5;
+  position: absolute;
+  top: -30px;
+  transition:
+    transform 400ms,
+    clip-path 400ms,
+    opacity 400ms;
+  transform: rotate(10deg);
+  transform-origin: -10% 50%;
+  z-index: 999999;
+}
+
+.bubble-text {
+  color: white;
+  left: 28px;
+  position: absolute;
+  top: 30px;
+  font-size: 14px;
+}
+
+.tooltip:hover .bubble {
+  clip-path: path(
+    'M 231.23262,50.748829 A 30,30 0 0 1 201.23262,80.748829 30,30 0 0 1 171.23262,50.748829 30,30 0 0 1 201.23262,20.748829 30,30 0 0 1 231.23262,50.748829 M 221.85368,17.069946 A 30,30 0 0 1 191.85368,47.069946 30,30 0 0 1 161.85368,17.069946 30,30 0 0 1 191.85368,-12.930054 30,30 0 0 1 221.85368,17.069946 M 191.58533,52.880402 A 30,30 0 0 1 161.58533,82.880402 30,30 0 0 1 131.58533,52.880402 30,30 0 0 1 161.58533,22.880402 30,30 0 0 1 191.58533,52.880402 M 168.56433,11.101538 A 30,30 0 0 1 138.56433,41.101538 30,30 0 0 1 108.56433,11.101538 30,30 0 0 1 138.56433,-18.898462 30,30 0 0 1 168.56433,11.101538 M 143.83806,50.322514 A 30,30 0 0 1 113.83806,80.322514 30,30 0 0 1 83.838058,50.322514 30,30 0 0 1 113.83806,20.322514 30,30 0 0 1 143.83806,50.322514 M 132.32755,21.333096 A 30,30 0 0 1 102.32755,51.333096 30,30 0 0 1 72.327553,21.333096 30,30 0 0 1 102.32755,-8.6669044 30,30 0 0 1 132.32755,21.333096 M 94.385521,55.864605 A 30,30 0 0 1 64.385521,85.864605 30,30 0 0 1 34.385521,55.864605 30,30 0 0 1 64.385521,25.864605 30,30 0 0 1 94.385521,55.864605 M 93.106575,17.496262 A 30,30 0 0 1 63.106575,47.496262 30,30 0 0 1 33.106575,17.496262 30,30 0 0 1 63.106575,-12.503738 30,30 0 0 1 93.106575,17.496262 M 57.192234,49.857197 A 30,30 0 0 1 27.192234,79.857197 30,30 0 0 1 -2.807766,49.857197 30,30 0 0 1 27.192234,19.857197 30,30 0 0 1 57.192234,49.857197 M 44.303602,18.772854 A 30,30 0 0 1 14.303602,48.772854 30,30 0 0 1 -15.696398,18.772854 30,30 0 0 1 14.303602,-11.227146 30,30 0 0 1 44.303602,18.772854'
+  );
+  opacity: 1;
+  transform: rotate(0deg);
 }

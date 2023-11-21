@@ -15,6 +15,7 @@ const config: Config = {
         btnPrimary: '#0076FF', // Primary Button
         btngit: '#24292E', // Github Button
         borderemail: '#C1CCD9', // Email button border email
+        sidebar: '#F4F5FA', // Sidebar background color
       },
     },
   },
