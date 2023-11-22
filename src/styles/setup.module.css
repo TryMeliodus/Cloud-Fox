@@ -1,0 +1,33 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.subcontainer {
+  padding: 20px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 1px 4px 1px rgba(60, 89, 121, 0.09);
+  height: 96%;
+}
+
+.addbtn {
+  @apply bg-btnPrimary px-8 rounded-md text-white h-[38px];
+}
+
+hr.enable {
+  border-top: 4px solid #0076ff;
+  border-radius: 4px;
+}
+
+hr.disable {
+  border-top: 4px solid #7a8da2;
+  opacity: 25%;
+  border-radius: 4px;
+}
+
+.contentArea {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}

@@ -1,27 +1,27 @@
 import { Outlet } from 'react-router-dom'
 
-import Logo from '../assets/logo.png'
-import Node from '../assets/node.png'
-import Python from '../assets/python.png'
-import Html from '../assets/html.png'
-import Angular from '../assets/angular.png'
-import Vue from '../assets/vue.png'
-import React from '../assets/react.png'
-import Gatsby from '../assets/Gatsby.png'
-import Astro from '../assets/astro.png'
-import Svelte from '../assets/svelte.png'
+// import Logo from '../assets/logo.png'
+// import Node from '../assets/node.png'
+// import Python from '../assets/python.png'
+// import Html from '../assets/html.png'
+// import Angular from '../assets/angular.png'
+// import Vue from '../assets/vue.png'
+// import React from '../assets/react.png'
+// import Gatsby from '../assets/Gatsby.png'
+// import Astro from '../assets/astro.png'
+// import Svelte from '../assets/svelte.png'
 
 export default function theme() {
   return (
     <div className={`main`}>
-      <div className="header-area ">
+      {/* <div className="header-area ">
         <a href="#" target="_blank" rel="noreferrer">
           <img src={Logo} className="w-auto h-6" alt="Vite logo" />
         </a>
-      </div>
+      </div> */}
       <Outlet />
       {/*Primary Footer Area */}
-      <div className="footer">
+      {/* <div className="footer">
         <div className="grid grid-cols-5">
           <div className="col-span-3">
             <div className="container">
@@ -94,7 +94,7 @@ export default function theme() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/*Primary Footer Area */}
     </div>
   )

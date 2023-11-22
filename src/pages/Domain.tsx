@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import style from '../styles/app.module.css'
 
 import Nofile from '../assets/nofile.png'
@@ -7,6 +8,8 @@ import Add from '../assets/add.png'
 import Sidebar from './Sidebar'
 
 function Domain() {
+  const navigate = useNavigate()
+
   useEffect(() => {
     console.log(import.meta)
   })
@@ -31,10 +34,14 @@ function Domain() {
                   <p className="text-[13px]">Add a domain right here.</p>
                 </div>
               </div>
-              <button className={style.importbtn}>Add</button>
-              {/* <label className={style.importbtn}>
-                <input type="file" />
-              </label> */}
+              <button
+                onClick={() => {
+                  navigate('/domain/setup')
+                }}
+                className={style.importbtn}
+              >
+                Add
+              </button>
             </div>
           </div>
           <div className="bottom-5 fixed text-center text-footerText text-xs">

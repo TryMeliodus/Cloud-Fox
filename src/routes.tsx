@@ -11,6 +11,7 @@ import EmailSignup from './pages/EmailSignup'
 import GitSignup from './pages/GitSignup'
 import App from './pages/App'
 import Domain from './pages/Domain'
+import Setup from './pages/Setup'
 
 export default function routes() {
   const publicRoutes = createBrowserRouter([
@@ -25,6 +26,7 @@ export default function routes() {
         { path: '/gitsignup', element: <GitSignup /> },
         { path: '/app', element: <App /> },
         { path: '/domain', element: <Domain /> },
+        { path: '/domain/setup', element: <Setup /> },
       ],
     },
   ])
