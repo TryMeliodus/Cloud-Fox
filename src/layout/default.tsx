@@ -16,13 +16,13 @@ export default function theme() {
     <div className={`main`}>
       {/* <div className="header-area ">
         <a href="#" target="_blank" rel="noreferrer">
-          <img src={Logo} className="w-auto h-8" alt="Vite logo" />
+          <img src={Logo} className="w-auto h-8 custom-mobile-header-logo" alt="Vite logo" />
         </a>
       </div> */}
       <Outlet />
       {/*Primary Footer Area */}
       {/* <div className="footer">
-        <div className="grid grid-cols-5">
+        <div className="grid grid-cols-5 custom-mobile-grid">
           <div className="col-span-3">
             <div className="container">
               <div>
@@ -49,7 +49,7 @@ export default function theme() {
             </div>
           </div>
           <div className="col-span-2">
-            <div className="flex items-start justify-between">
+            <div className="flex items-start justify-between custom-mobile">
               <div className="footer-links">
                 <p className="text-base font-semibold text-default">About</p>
                 <ul className="my-3">

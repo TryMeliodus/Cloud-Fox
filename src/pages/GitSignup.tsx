@@ -12,7 +12,9 @@ function GitSignup() {
     <>
       <div className={style.container}>
         <div className="flex justify-center items-center flex-col min-h-screen">
-          <p className="text-default font-semibold text-3xl">Let set up your GitHub with Cloud Fox</p>
+          <p className="text-default font-semibold text-3xl custom-title-mobile">
+            Let set up your GitHub with Cloud Fox
+          </p>
           <div className={style.subcontainer}>
             <Link to={`/`} className={style.btngithub}>
               <img className="w-auto h-6" src={gitLogo} alt="" />
