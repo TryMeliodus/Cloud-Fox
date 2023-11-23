@@ -22,7 +22,7 @@ function Domain() {
           <div className="flex justify-center items-center flex-col">
             <img className="w-auto h-20 mb-3" src={Nofile} alt="" />
             <p className="text-default font-medium text-lg">No domains to show</p>
-            <p className="text-sm text-default my-2">
+            <p className="text-sm text-default my-2 no-data-desc">
               Configure your existing domain to use Cloud Fox DNS or purchase one right here and we will set it up for
               you.
             </p>

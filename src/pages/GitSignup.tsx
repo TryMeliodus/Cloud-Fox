@@ -19,7 +19,7 @@ function GitSignup() {
               <p>Continue with Github</p>
             </Link>
           </div>
-          <div className="text-sm text-default my-5">
+          <div className="text-sm text-default my-5 no-data-desc">
             Note: It is globally aware so that no matter where a request comes from, all requests are routed to the
             nearest nodes.
           </div>

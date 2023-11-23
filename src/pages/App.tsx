@@ -25,7 +25,7 @@ function App() {
           <div className="flex justify-center items-center flex-col">
             <img className="w-auto h-14 mb-3" src={Deploy} alt="" />
             <p className="text-default font-medium text-lg">Deploy your first project</p>
-            <p className="text-sm text-default my-2">
+            <p className="text-sm text-default my-2 no-data-desc">
               Deploy once, deliver everywhere. When you push code to Cloud Fox, we make it instantly available across
               the planet.
             </p>
@@ -61,7 +61,7 @@ function App() {
                 onClick={() => {
                   setpopup(true)
                 }}
-                className={style.addbtn}
+                className={style.appaddbtn}
               >
                 <p className="text-sm">Add new website</p>
                 <img className="h-auto w-5" src={Downarrow} alt="" />

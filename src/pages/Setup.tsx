@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import style from '../styles/setup.module.css'
 
 // import Pencil from '../assets/pencil.png'
-import Success from '../assets/success.png'
+// import Success from '../assets/success.png'
 
 import Sidebar from './Sidebar'
 
@@ -43,13 +43,16 @@ function Setup() {
               {/* Content area */}
               <div className={style.contentArea}>
                 {/* Add domain area */}
-                {/* <div className='my-10'>
+                <div className="my-10">
                   <p className="text-default font-medium text-lg">What domain would you like to use?</p>
                   <p className="text-sm text-default my-1">
-                    Add a domain or subdomain you own, or add a new domain and we will register it for you.</p>
+                    Add a domain or subdomain you own, or add a new domain and we will register it for you.
+                  </p>
                 </div>
-                <div className='space-y-1.5 mb-4'>
-                  <label className='text-default font-normal text-sm' htmlFor="">Domain or subdomain</label>
+                <div className="space-y-1.5 mb-4">
+                  <label className="text-default font-normal text-sm" htmlFor="">
+                    Domain or subdomain
+                  </label>
                   <input
                     type="url"
                     id="url"
@@ -58,7 +61,7 @@ function Setup() {
                     required
                   />
                 </div>
-                <button className={style.addbtn}>Add</button> */}
+                <button className={style.addbtn}>Add</button>
                 {/* Add domain area */}
 
                 {/* Verify area */}
@@ -84,10 +87,10 @@ function Setup() {
                 {/* Verify area */}
 
                 {/* Status area */}
-                <div className="my-10 flex items-center space-x-3">
+                {/* <div className="my-10 flex items-center space-x-3">
                   <img className="w-auto h-6" src={Success} alt="" />
                   <p className="text-default font-medium text-lg">Your domain is successfully verified.</p>
-                </div>
+                </div> */}
 
                 {/* Status area */}
               </div>

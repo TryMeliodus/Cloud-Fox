@@ -28,7 +28,7 @@ export default function theme() {
               <div>
                 <p className="text-default text-lg font-semibold">Cloud Fox</p>
                 <div className="my-2">
-                  <p className="text-[#7A8DA2] font-normal text-[15px]">
+                  <p className="text-[#7A8DA2] font-normal text-[15px] subscribe-msg">
                     Subscribe to our newsletter and get useful resources.
                   </p>
                   <div className="flex my-3 space-x-3 items-center">

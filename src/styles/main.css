@@ -377,3 +377,30 @@ span.led-green {
   opacity: 1;
   transform: rotate(0deg);
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Primary Footer Responsive */
+  .footer .container .subscribe-msg {
+    font-size: 13px;
+  }
+
+  .footer .footer-links p {
+    font-size: 13px;
+  }
+
+  .footer .footer-links ul li {
+    font-size: 12px;
+    width: 90%;
+    word-break: break-word;
+  }
+  /* Primary Footer Responsive */
+
+  .no-data-desc {
+    text-align: center;
+  }
+  .appaddbtn p {
+    font-size: 12px;
+    line-height: 1rem;
+    white-space: nowrap;
+  }
+}

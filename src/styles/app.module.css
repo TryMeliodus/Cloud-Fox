@@ -39,6 +39,20 @@
   height: 96%;
 }
 
-.addbtn {
+.appaddbtn {
   @apply bg-btnPrimary px-3 rounded-md text-white h-[38px] flex items-center space-x-1 cursor-pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .appaddbtn {
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: max-content;
+  }
+
+  .appaddbtn p {
+    font-size: 12px;
+    line-height: 1rem;
+    white-space: nowrap;
+  }
 }
