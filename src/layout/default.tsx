@@ -16,7 +16,7 @@ export default function theme() {
     <div className={`main`}>
       {/* <div className="header-area ">
         <a href="#" target="_blank" rel="noreferrer">
-          <img src={Logo} className="w-auto h-6" alt="Vite logo" />
+          <img src={Logo} className="w-auto h-8" alt="Vite logo" />
         </a>
       </div> */}
       <Outlet />
@@ -44,7 +44,7 @@ export default function theme() {
                 </div>
               </div>
               <div className="">
-                <img className="w-auto h-10" src={Logo} alt="" />
+                <img className="w-auto h-16" src={Logo} alt="" />
               </div>
             </div>
           </div>

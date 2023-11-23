@@ -73,7 +73,7 @@ function Sidebar() {
       >
         <div className="flex flex-col space-y-6" data-dev-hint="optional div htmlFor having an extra footer navigation">
           <a href="/app" className="text-white mx-auto mb-4" title="Cloud Fox">
-            <img className="w-auto h-5" src={Logo} alt="" />
+            <img className="w-auto h-10" src={Logo} alt="" />
           </a>
 
           <nav data-dev-hint="main navigation">
