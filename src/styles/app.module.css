@@ -38,3 +38,7 @@
   box-shadow: 0px 1px 4px 1px rgba(60, 89, 121, 0.09);
   height: 96%;
 }
+
+.addbtn {
+  @apply bg-btnPrimary px-3 rounded-md text-white h-[38px] flex items-center space-x-1 cursor-pointer;
+}

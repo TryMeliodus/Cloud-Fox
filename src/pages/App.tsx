@@ -1,13 +1,17 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
 import style from '../styles/app.module.css'
 
 // import Deploy from '../assets/deploy.png'
 // import Add from '../assets/add.png'
 import Rightarrow from '../assets/rightarrow.png'
+import Downarrow from '../assets/downarrow.png'
 
 import Sidebar from './Sidebar'
 
 function App() {
+  const [popup, setpopup] = useState(false)
   useEffect(() => {
     console.log(import.meta)
   })
@@ -46,13 +50,22 @@ function App() {
         {/* While data is already exist */}
         <div className={style.tablecontainer}>
           <div className={style.tablesubcontainer}>
-            <div className="border-b pb-3">
+            <div className="border-b pb-3 flex items-center justify-between">
               <div>
                 <p className="text-default font-medium text-lg">List of instances</p>
                 <p className="text-sm text-default my-1">
                   Cloud Fox will automatically provision DNS records and wildcard certificates for all subdomains.
                 </p>
               </div>
+              <button
+                onClick={() => {
+                  setpopup(true)
+                }}
+                className={style.addbtn}
+              >
+                <p className="text-sm">Add new website</p>
+                <img className="h-auto w-5" src={Downarrow} alt="" />
+              </button>
             </div>
             <div className="px-4 pt-8 sm:px-0 table-rc-sec">
               <div className="rdb-mobile-table border-x border-t rounded table-rc ">
@@ -76,7 +89,7 @@ function App() {
                         Jun 23, 2023
                       </td>
                       <td data-colname="" className="font-medium">
-                        <img className="w-auto h-4 mx-auto" src={Rightarrow} alt="" />
+                        <img className="w-auto h-4 mx-auto cursor-pointer" src={Rightarrow} alt="" />
                       </td>
                     </tr>
                     <tr className=" text-table_data border-b  text-sm capitalize text-opacity-75">
@@ -90,7 +103,7 @@ function App() {
                         Jun 23, 2023
                       </td>
                       <td data-colname="" className="font-medium">
-                        <img className="w-auto h-4 mx-auto" src={Rightarrow} alt="" />
+                        <img className="w-auto h-4 mx-auto cursor-pointer" src={Rightarrow} alt="" />
                       </td>
                     </tr>
                   </tbody>
@@ -106,6 +119,19 @@ function App() {
         </div>
         {/* While data is already exist */}
       </div>
+
+      {popup && (
+        <div className="bg-white p-4 shadow-lg rounded-md absolute z-[99999] top-[110px] right-12">
+          <div className="text-[15px] flex flex-col space-y-2.5">
+            <Link className="text-default" to={`/`}>
+              Import an existing project
+            </Link>
+            <Link className="text-btnPrimary" to={`/`}>
+              Deploy manually
+            </Link>
+          </div>
+        </div>
+      )}
     </>
   )
 }
