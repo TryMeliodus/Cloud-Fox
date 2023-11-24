@@ -8,7 +8,7 @@ import style from '../styles/app.module.css'
 import Rightarrow from '../assets/rightarrow.png'
 import Downarrow from '../assets/downarrow.png'
 
-import Sidebar from './Sidebar'
+// import Sidebar from './Sidebar'
 
 function App() {
   const [popup, setpopup] = useState(false)
@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <div className="flex min-h-screen" data-dev-hint="container">
-        <Sidebar />
+        {/* <Sidebar /> */}
         {/* while no data import */}
         {/* <div className={style.container}>
           <div className="flex justify-center items-center flex-col">
@@ -33,15 +33,15 @@ function App() {
               <div className="flex items-center space-x-3">
                 <img className="w-auto h-6" src={Add} alt="" />
                 <div className="text-default">
-                  <p className="font-medium text-[15px]">Import Project</p>
-                  <p className="text-[13px]">Add a repo from your git provider</p>
+                  <p className="font-medium text-[15px] title">Import Project</p>
+                  <p className="text-[13px] subtitle">Add a repo from your git provider</p>
                 </div>
               </div>
               <button className={style.importbtn}>Import</button>
             </div>
           </div>
 
-          <div className="bottom-5 fixed text-center text-footerText text-xs">
+          <div className="bottom-5 fixed text-center text-footerText text-xs mobile-footer">
             © 2017-2023. All Rights Reserved. Meliodus Software Solutions (OPC) Private Limited
           </div>
         </div> */}
@@ -50,7 +50,7 @@ function App() {
         {/* While data is already exist */}
         <div className={style.tablecontainer}>
           <div className={style.tablesubcontainer}>
-            <div className="border-b pb-3 flex items-center justify-between">
+            <div className="border-b pb-3 flex items-center justify-between custom-mobile-wrapper">
               <div>
                 <p className="text-default font-medium text-lg">List of instances</p>
                 <p className="text-sm text-default my-1">
@@ -102,7 +102,7 @@ function App() {
                       <td data-colname="Date" className="font-medium">
                         Jun 23, 2023
                       </td>
-                      <td data-colname="" className="font-medium">
+                      <td data-colname="" className="font-medium ">
                         <img className="w-auto h-4 mx-auto cursor-pointer" src={Rightarrow} alt="" />
                       </td>
                     </tr>
@@ -111,8 +111,8 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center">
-            <div className="bottom-5 fixed text-center text-footerText text-xs">
+          <div className="flex justify-center ">
+            <div className="bottom-5 fixed text-center text-footerText text-xs mobile-footer">
               © 2017-2023. All Rights Reserved. Meliodus Software Solutions (OPC) Private Limited
             </div>
           </div>
@@ -121,7 +121,7 @@ function App() {
       </div>
 
       {popup && (
-        <div className="bg-white p-4 shadow-lg rounded-md absolute z-[99999] top-[110px] right-12">
+        <div className="bg-white p-4 shadow-lg rounded-md absolute z-[99999] top-[110px] right-12 newwebsite-mobile-popup">
           <div className="text-[15px] flex flex-col space-y-2.5">
             <Link className="text-default" to={`/`}>
               Import an existing project

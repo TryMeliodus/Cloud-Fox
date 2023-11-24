@@ -31,3 +31,24 @@ hr.disable {
   margin-top: 50px;
   margin-bottom: 30px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .tablecontainer {
+    padding: 1rem;
+  }
+
+  .tablesubcontainer {
+    height: 93.5%;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .subcontainer {
+    padding: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

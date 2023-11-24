@@ -466,4 +466,39 @@ span.led-green {
   .custom-mobile-header-logo {
     height: 50px;
   }
+  .custom-mobile-wrapper {
+    flex-wrap: wrap;
+    row-gap: 5px;
+  }
+  .newwebsite-mobile-popup {
+    top: 155px;
+    left: 35px;
+    width: max-content;
+  }
+
+  .table-rc-sec .table-rc table tbody tr td img {
+    display: none;
+  }
+
+  .mobile-footer {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .subtitle {
+    font-size: 12px;
+  }
+  .setup-mobile-container {
+    gap: 1rem;
+  }
+
+  .mobile-success-msg {
+    font-size: 14px;
+  }
+  .mobile-success-img {
+    height: 20px;
+  }
 }

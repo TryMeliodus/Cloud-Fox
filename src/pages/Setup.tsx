@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 import style from '../styles/setup.module.css'
 
 // import Pencil from '../assets/pencil.png'
-// import Success from '../assets/success.png'
+import Success from '../assets/success.png'
 
-import Sidebar from './Sidebar'
+// import Sidebar from './Sidebar'
 
 function Setup() {
   useEffect(() => {
@@ -14,7 +14,7 @@ function Setup() {
   return (
     <>
       <div className="flex min-h-screen" data-dev-hint="container">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <div className={style.container}>
           <div className={style.subcontainer}>
             <div className="border-b pb-3">
@@ -25,14 +25,14 @@ function Setup() {
             </div>
             {/* Loader Area */}
             <div className="mt-8">
-              <div className="grid grid-cols-3 gap-7 ">
+              <div className="grid grid-cols-3 gap-7 setup-mobile-container ">
                 <div className="col-span-1">
                   <hr className={style.enable} />
-                  <p className="text-default font-medium text-sm my-1">1. Add Domain</p>
+                  <p className="text-default font-medium text-sm my-1">1. Add </p>
                 </div>
                 <div className="col-span-1">
                   <hr className={style.disable} />
-                  <p className="text-default font-medium text-sm my-1">2. Verify Domain</p>
+                  <p className="text-default font-medium text-sm my-1">2. Verify </p>
                 </div>
                 <div className="col-span-1">
                   <hr className={style.disable} />
@@ -43,7 +43,7 @@ function Setup() {
               {/* Content area */}
               <div className={style.contentArea}>
                 {/* Add domain area */}
-                <div className="my-10">
+                {/* <div className="my-10">
                   <p className="text-default font-medium text-lg">What domain would you like to use?</p>
                   <p className="text-sm text-default my-1">
                     Add a domain or subdomain you own, or add a new domain and we will register it for you.
@@ -61,7 +61,7 @@ function Setup() {
                     required
                   />
                 </div>
-                <button className={style.addbtn}>Add</button>
+                <button className={style.addbtn}>Add</button> */}
                 {/* Add domain area */}
 
                 {/* Verify area */}
@@ -87,10 +87,12 @@ function Setup() {
                 {/* Verify area */}
 
                 {/* Status area */}
-                {/* <div className="my-10 flex items-center space-x-3">
-                  <img className="w-auto h-6" src={Success} alt="" />
-                  <p className="text-default font-medium text-lg">Your domain is successfully verified.</p>
-                </div> */}
+                <div className="my-10 flex items-center space-x-3">
+                  <img className="w-auto h-6 mobile-success-img" src={Success} alt="" />
+                  <p className="text-default font-medium text-lg mobile-success-msg">
+                    Your domain is successfully verified.
+                  </p>
+                </div>
 
                 {/* Status area */}
               </div>
@@ -99,7 +101,7 @@ function Setup() {
             {/* Loader Area */}
           </div>
           <div className="flex justify-center">
-            <div className="bottom-5 fixed text-center text-footerText text-xs">
+            <div className="bottom-5 fixed text-center text-footerText text-xs mobile-footer">
               © 2017-2023. All Rights Reserved. Meliodus Software Solutions (OPC) Private Limited
             </div>
           </div>

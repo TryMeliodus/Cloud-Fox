@@ -5,7 +5,7 @@ import style from '../styles/app.module.css'
 import Nofile from '../assets/nofile.png'
 import Add from '../assets/add.png'
 
-import Sidebar from './Sidebar'
+// import Sidebar from './Sidebar'
 
 function Domain() {
   const navigate = useNavigate()
@@ -17,7 +17,7 @@ function Domain() {
   return (
     <>
       <div className="flex min-h-screen" data-dev-hint="container">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <div className={style.container}>
           <div className="flex justify-center items-center flex-col">
             <img className="w-auto h-20 mb-3" src={Nofile} alt="" />
@@ -30,8 +30,8 @@ function Domain() {
               <div className="flex items-center space-x-3">
                 <img className="w-auto h-6" src={Add} alt="" />
                 <div className="text-default">
-                  <p className="font-medium text-[15px]">Add or register domain</p>
-                  <p className="text-[13px]">Add a domain right here.</p>
+                  <p className="font-medium text-[15px] title">Add or register domain</p>
+                  <p className="text-[13px] subtitle">Add a domain right here.</p>
                 </div>
               </div>
               <button
@@ -44,7 +44,7 @@ function Domain() {
               </button>
             </div>
           </div>
-          <div className="bottom-5 fixed text-center text-footerText text-xs">
+          <div className="bottom-5 fixed text-center text-footerText text-xs mobile-footer">
             © 2017-2023. All Rights Reserved. Meliodus Software Solutions (OPC) Private Limited
           </div>
         </div>
