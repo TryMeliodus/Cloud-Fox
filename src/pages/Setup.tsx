@@ -4,7 +4,7 @@ import style from '../styles/setup.module.css'
 // import Pencil from '../assets/pencil.png'
 import Success from '../assets/success.png'
 
-// import Sidebar from './Sidebar'
+import Sidebar from './Sidebar'
 
 function Setup() {
   useEffect(() => {
@@ -14,7 +14,8 @@ function Setup() {
   return (
     <>
       <div className="flex min-h-screen" data-dev-hint="container">
-        {/* <Sidebar /> */}
+        <input type="checkbox" id="menu-open" className="hidden" />
+        <Sidebar />
         <div className={style.container}>
           <div className={style.subcontainer}>
             <div className="border-b pb-3">

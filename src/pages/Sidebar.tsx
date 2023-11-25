@@ -7,18 +7,25 @@ import WWW from '../assets/app.svg'
 import Domain from '../assets/domain.svg'
 import Profile from '../assets/profile.jpg'
 
+import ProfileOption from './ProfileOption'
+
 function Sidebar() {
-  const [popup, setpopup] = useState(false)
+  const [profileoption, setprofileoption] = useState<boolean>(false)
+
   useEffect(() => {
     console.log(import.meta)
   })
+
+  const handleProfileOption = (flag: boolean) => {
+    setprofileoption(flag)
+  }
 
   return (
     <>
       {/* sidebar start */}
       <label
         htmlFor="menu-open"
-        className="absolute right-2 bottom-2 shadow-lg rounded-full p-2 bg-gray-100 text-gray-600 md:hidden"
+        className="absolute right-2 top-2 shadow-lg rounded-full p-2 bg-gray-100 text-gray-600 md:hidden"
         data-dev-hint="floating action button"
       >
         <svg
@@ -32,7 +39,7 @@ function Sidebar() {
         </svg>
       </label>
 
-      <header className="bg-gray-600 text-gray-100 flex justify-between md:hidden" data-dev-hint="mobile menu bar">
+      {/* <header className="bg-gray-400 text-gray-100 flex justify-between md:hidden" data-dev-hint="mobile menu bar">
         <a href="/app" className="block p-4 text-white font-bold whitespace-nowrap truncate">
           Cloud Fox
         </a>
@@ -63,11 +70,11 @@ function Sidebar() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </label>
-      </header>
+      </header> */}
 
       <aside
         id="sidebar"
-        className="bg-sidebar text-gray-100 w-20 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transhtmlForm md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between  z-[10000]"
+        className="bg-sidebar text-gray-100 w-20 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transhtmlForm md:relative md:translate-x-0 transition duration-200 ease-in-out  flex flex-col justify-between  z-[10000]"
         data-dev-hint="sidebar; px-0 htmlFor frameless; px-2 htmlFor visually inset the navigation "
         style={{ transform: 'translateX(var(--tw-translate-x))' }}
       >
@@ -119,7 +126,7 @@ function Sidebar() {
         <nav data-dev-hint="second-main-navigation or footer navigation">
           <div
             onClick={() => {
-              setpopup(true)
+              setprofileoption(true)
             }}
             className="mx-auto cursor-pointer"
           >
@@ -128,18 +135,10 @@ function Sidebar() {
         </nav>
       </aside>
 
-      {popup && (
-        <div className="bg-white p-3 shadow-lg rounded-md absolute z-[99999] bottom-[65px] left-4">
-          <p className="text-default text-[13px] border-b pb-1 border-default border-opacity-30">kiran@meliodus.org</p>
-          <div className="text-[15px] flex flex-col mt-4 space-y-1.5">
-            <Link className="text-default" to={`/`}>
-              Settings
-            </Link>
-            <Link className="text-[#C3002F]" to={`/`}>
-              Signout
-            </Link>
-          </div>
-        </div>
+      {profileoption && (
+        <>
+          <ProfileOption handleProfileOption={handleProfileOption} />
+        </>
       )}
     </>
   )

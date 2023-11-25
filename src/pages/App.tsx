@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import style from '../styles/app.module.css'
 
@@ -8,18 +7,25 @@ import style from '../styles/app.module.css'
 import Rightarrow from '../assets/rightarrow.png'
 import Downarrow from '../assets/downarrow.png'
 
-// import Sidebar from './Sidebar'
+import Sidebar from './Sidebar'
+import Dropdown from './Dropdown'
 
 function App() {
-  const [popup, setpopup] = useState(false)
+  const [dropdown, setdropdown] = useState<boolean>(false)
+
   useEffect(() => {
     console.log(import.meta)
   })
 
+  const handleDropdown = (flag: boolean) => {
+    setdropdown(flag)
+  }
+
   return (
     <>
       <div className="flex min-h-screen" data-dev-hint="container">
-        {/* <Sidebar /> */}
+        <input type="checkbox" id="menu-open" className="hidden" />
+        <Sidebar />
         {/* while no data import */}
         {/* <div className={style.container}>
           <div className="flex justify-center items-center flex-col">
@@ -59,7 +65,7 @@ function App() {
               </div>
               <button
                 onClick={() => {
-                  setpopup(true)
+                  handleDropdown(true)
                 }}
                 className={style.appaddbtn}
               >
@@ -110,6 +116,12 @@ function App() {
                 </table>
               </div>
             </div>
+
+            {dropdown && (
+              <>
+                <Dropdown handleDropdown={handleDropdown} />
+              </>
+            )}
           </div>
           <div className="flex justify-center ">
             <div className="bottom-5 fixed text-center text-footerText text-xs mobile-footer">
@@ -119,19 +131,6 @@ function App() {
         </div>
         {/* While data is already exist */}
       </div>
-
-      {popup && (
-        <div className="bg-white p-4 shadow-lg rounded-md absolute z-[99999] top-[110px] right-12 newwebsite-mobile-popup">
-          <div className="text-[15px] flex flex-col space-y-2.5">
-            <Link className="text-default" to={`/`}>
-              Import an existing project
-            </Link>
-            <Link className="text-btnPrimary" to={`/`}>
-              Deploy manually
-            </Link>
-          </div>
-        </div>
-      )}
     </>
   )
 }

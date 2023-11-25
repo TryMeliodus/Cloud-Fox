@@ -5,7 +5,7 @@ import style from '../styles/app.module.css'
 import Nofile from '../assets/nofile.png'
 import Add from '../assets/add.png'
 
-// import Sidebar from './Sidebar'
+import Sidebar from './Sidebar'
 
 function Domain() {
   const navigate = useNavigate()
@@ -17,7 +17,8 @@ function Domain() {
   return (
     <>
       <div className="flex min-h-screen" data-dev-hint="container">
-        {/* <Sidebar /> */}
+        <input type="checkbox" id="menu-open" className="hidden" />
+        <Sidebar />
         <div className={style.container}>
           <div className="flex justify-center items-center flex-col">
             <img className="w-auto h-20 mb-3" src={Nofile} alt="" />
